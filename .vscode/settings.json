@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "rome.rome",
+  "editor.codeActionsOnSave": {
+    "quickfix.rome": true,
+    "source.organizeImports.rome": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
