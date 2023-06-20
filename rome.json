@@ -6,11 +6,16 @@
   "linter": {
     "enabled": true,
     "rules": {
-	  "all": true
+      "all": true
     }
   },
   "formatter": {
     "indentSize": 2,
     "indentStyle": "space"
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   }
 }

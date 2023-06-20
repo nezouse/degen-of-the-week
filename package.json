@@ -2,12 +2,14 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
+    "prepare": "panda codegen",
+    "build": "pnpm prepare && remix build",
     "dev": "remix dev",
     "typecheck": "tsc",
     "check": "rome ci .",
     "format": "rome format . --write",
-    "lint": "rome check . --apply-unsafe"
+    "lint": "rome check . --apply-unsafe",
+    "lint:fix": "pnpm format && pnpm lint"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^1.17.1",
@@ -20,6 +22,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.3.2",
     "@remix-run/dev": "^1.17.1",
     "@remix-run/serve": "^1.17.1",
     "@types/react": "^18.2.13",
