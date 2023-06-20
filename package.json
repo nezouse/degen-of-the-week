@@ -12,6 +12,7 @@
     "lint:fix": "pnpm format && pnpm lint"
   },
   "dependencies": {
+    "@clerk/remix": "^2.6.12",
     "@remix-run/css-bundle": "^1.17.1",
     "@remix-run/node": "^1.17.1",
     "@remix-run/react": "^1.17.1",

@@ -1,3 +1,9 @@
+import {
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/remix";
 import type { V2_MetaFunction } from "@remix-run/node";
 
 export const meta: V2_MetaFunction = () => {
@@ -10,6 +16,16 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+      <div>
+        <SignedIn>
+          <h1>Index route</h1>
+          <p>You are signed in!</p>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <RedirectToSignIn />
+        </SignedOut>
+      </div>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
