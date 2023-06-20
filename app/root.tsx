@@ -10,6 +10,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Analytics } from "@vercel/analytics/react";
 import styles from "~/index.css";
 
 export const loader: LoaderFunction = (args) => rootAuthLoader(args);
@@ -34,6 +35,7 @@ function app() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Analytics />
       </body>
     </html>
   );
